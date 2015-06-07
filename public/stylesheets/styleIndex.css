@@ -1,0 +1,93 @@
+.url{
+    color:green;
+}
+
+.idAndTitle{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#inputDiv{
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.linkEntry, .rankingContainer {
+    height: 120px;
+}
+
+.linkEntry{
+     margin: 5px 0 15px 0;
+}
+
+#inputFormLogin{
+    width: 100%;
+    margin-top: 20%;
+}
+
+.rankingContainer{
+    float: left;
+    text-align: center;
+    position: relative;
+    width: 21px;
+    margin-right: 20px;
+}
+
+.rankingValue{
+    margin-top: 8px;
+}
+
+.rankingContainer .rankingDown, .rankingContainer .rankingUp {
+    position: absolute;
+}
+
+.rankingContainer .rankingUp {
+    top: 20px;
+}
+
+.rankingContainer .rankingDown {
+    bottom: 20px;
+}
+
+.linkContainer{
+    border: 2px solid black;
+    float: left;
+    width: 80%;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+.creatInformation{
+    font-size: 12px;
+}
+
+.deleteButton{
+    float:right;
+}
+
+#sendLogOut{
+    margin-top: 20px;
+}
+
+#sendLinkButton{
+    margin-left: 20px;
+}
+
+#username{
+    margin-left: 20px;
+}
+
+#password{
+    margin-left: 26px;
+}
+
+body{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,18 @@
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/styleLogin.css')
+      script(src='../javascripts/jquery-1.11.2.min.js')
+      script(src='../javascripts/registerScript.js')
+   body
+   h1 Register
+   form(id="formRegisterInfo" action="/login")
+      p username
+         input(type="text" id="username")
+      p passwort
+         input(type="password" id="password")
+      input(type="submit" id="submitRegInfo")
+      br
+      br
+   p(id="registerMessage")

@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/styleIndex.css')
+    script(src='../javascripts/jquery-1.11.2.min.js')
+    script(src='../javascripts/handlebars-v3.0.0.js')
+    script(src='../javascripts/handleLinks.js')
+    script(type="text/x-handlebars-template" id="templateContainer").
+        {{#each links}}
+            <div class="linkEntry">
+                <div class="rankingContainer">
+                    <div class="rankingUp">
+                        <input type="image" class="rankingButtonUp" src="images/up.png" width="30" height="19" name="{{id}}">
+                        <p class="rankingValue">{{ranking}}</p>
+                </div>
+                     <div class="rankingDown">
+                        <input type="image" class="rankingButtonDown" src="images/down.png" width="30" height="19" name="{{id}}">
+                    </div>
+                </div>
+                <div class="linkContainer">
+                    <p class="idAndTitle">{{id}}: {{title}}</p>
+                    <p class="creatInformation">Creater: {{sender}} created on: {{date}}</p>
+                    <a href="{{url}}" class="url">{{url}}</a>
+                    <input type="button" name="{{id}}" value="Delete link {{id}}" class="deleteButton">
+                </div>
+            </div>
+        {{/each}}
+  body
+    block content
+        h1 Welcome #{usser || test}
+        form(id="inputForm" action="#")
+            p Titel eingeben
+            input(type='text' id="linkTitel" required)
+            p Link eingeben
+            input(type='text' id="linkText" pattern='https?://.+' placeholder='http://...' required)
+            input(type='submit' value='senden' id="sendLinkButton")
+        form(id="inputForm" action="/logout" method="GET")
+            input(type='submit' value='logout' id="sendLogOut")
+        div(class="allEntries")
+            each val in links
+                div(class="linkEntry")
+                    div(class="rankingContainer")
+                        div(class="rankingUp")
+                            input(type="image" src="images/up.png" class="rankingButtonUp" width="30" height="19" name="#{val.id}")
+                            p(class="rankingValue") #{val.ranking}
+                        div(class="rankingDown")
+                            input(type="image" src="images/down.png" class="rankingButtonDown" width="30" height="19" name="#{val.id}")
+                    div(class="linkContainer")
+                        p(class="idAndTitle") #{val.id}: #{val.title}
+                        p(class="creatInformation") Creater: #{val.sender} created on: #{val.date}
+                        a(href="#{val.url}" class="url") #{val.url}
+                        input(type="button" name="#{val.id}" value="Delete link #{val.id}" class="deleteButton")

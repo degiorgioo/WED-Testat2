@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/styleLogin.css')
+    script(src='../javascripts/jquery-1.11.2.min.js')
+    script(src='../javascripts/handlebars-v3.0.0.js')
+    script(src='../javascripts/loginScript.js')
+  body
+  h1 Link-Reddit
+  form(id="inputFormLogin" action="/")
+    p username
+        input(type="text" id="username")
+    p passwort
+        input(type="password" id="password")
+    input(type="submit" id="submitCreds")
+    br
+    br
+    a(href="/reg") Moechten Sie sich registrieren?
